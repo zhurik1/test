@@ -55,3 +55,4 @@ Feature: test-feature
     Then Go Button "#gobutton" with text "Go!" is displayed
     Then Result "#gobutton" contains "Go!" text
     Then Result "h2" is equal to "2"
+
