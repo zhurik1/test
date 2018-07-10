@@ -13,6 +13,7 @@ Then('History {string} is equal to {int}', (locator, result) => {
 });
 
 Then('Result {string} is equal to {string}', (locator, result) => {
+   browser.sleep(4000);
     const elem = element(by.css(locator));
     return expect(elem.getText()).to.eventually.equal(result);
 });
@@ -33,8 +34,9 @@ Then('Result {string} contains {string} text', (locator,text) => {
 });
 
 
-Then('Attribute {string} of field {string} is equal to {string}', (attribute,locator1,locator2) => {
-   const elem = element(by.css(attribute,locator1,locator2));
-    return expect(elem.getAttribute(attribute)).to.eventually.equal(false);
+Then('Attribute {string} of field {string} contains {string}', (attribute,locator1,value) => {
+    const elem = element(by.css(locator1));
+    console.log(elem.getAttribute(attribute));
+    return expect(elem.getAttribute(attribute)).to.eventually.contains(value);
 
 });
