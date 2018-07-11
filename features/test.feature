@@ -15,3 +15,11 @@ Feature: test-feature
     When User enters 6 in field "[ng-model='second']"
     When User clicks Go Button "#gobutton"
     Then History "h2" is equal to 0
+    When User enters 3 in field "[ng-model='first']"
+    When User enters 4 in field "[ng-model='second']"
+    When User clicks Go Button "#gobutton"
+    Then History "h2" is equal to "0"
+    When User enters 5 in field "[ng-model='first']"
+    When User enters 6 in field "[ng-model='second']"
+    When User clicks Go Button "#gobutton"
+    Then History "h2" is equal to "0"
