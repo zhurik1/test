@@ -1,4 +1,6 @@
 const {Given, When} = require('cucumber');
+const {setDefaultTimeout} = require('cucumber');
+setDefaultTimeout(60 * 1000);
 
 Given('User prints comment {string}', (comment) => {
     return console.log(comment);
