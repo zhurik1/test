@@ -13,7 +13,6 @@ Then('History {string} is equal to {int}', (locator, result) => {
 });
 
 Then('Result {string} is equal to {string}', (locator, result) => {
-    browser.sleep(4000);
    browser.sleep(4000);
     const elem = element(by.css(locator));
     return expect(elem.getText()).to.eventually.equal(result);
